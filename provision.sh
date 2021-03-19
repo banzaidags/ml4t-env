@@ -1,4 +1,4 @@
-#sudo apt-get update
+sudo apt-get update
 
 # Install python3
 #sudo apt-get -y install python3 python3-pip python3-apt
@@ -10,7 +10,7 @@ cd ~
 
 # You can change what anaconda version you want at 
 # https://repo.continuum.io/archive/
-wget -q https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh --progress=bar:force:noscroll
+wget -q https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh --show-progress --progress=bar:force:noscroll
 bash Anaconda3-2020.11-Linux-x86_64.sh -b -p ~/anaconda
 rm Anaconda3-2020.11-Linux-x86_64.sh
 echo 'export PATH="~/anaconda/bin:$PATH"' >> ~/.bashrc
@@ -24,3 +24,7 @@ source ~/.bashrc
 ~/anaconda/bin/conda env create --file env.yml
 
 ~/anaconda/bin/conda init bash
+
+# Allow password Authentication
+sed -i 's/ChallengeResponseAuthentication no/ChallengeResponseAuthentication yes/g' /etc/ssh/sshd_config
+/etc/init.d/ssh restart

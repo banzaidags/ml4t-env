@@ -9,17 +9,17 @@ The information on this page is for those who are interested to have a Python de
 * [Vagrant](https://www.vagrantup.com/)
 
 ### Installation
-Add Vagrant Box
+Add Vagrant Box on local machine
 ```
 $ vagrant box add ubuntu/trusty64
 ```
 ### Create Virtual Machine
-Run `vagrant up` to bring up virtual machine.
+Run `vagrant up` to bring up virtual machine; wait for it to load and configure.
 
 _You will now have a configured VM._
 
 ### Login to VM and Create working envionment
-_NOTE: you can login by connection to `127.0.0.1:2222` and credentials `ml4t/student`_
+_NOTE: you can login by connection to `127.0.0.1:2222` and credentials `vagrant/vagrant`_
 
 In the virtual environment created earlier, run
 ```
@@ -29,13 +29,9 @@ In the virtual environment created earlier, run
 ```
 $ conda activate ml4t
 ```
-In the virtual environment created earlier, run
-```
-$ conda deactivate
-```
 
 ### Tear Down
+This will destroy the Image
 ```
 $ vagrant destroy
 ```
-This will destroy the Image
