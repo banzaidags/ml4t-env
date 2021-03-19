@@ -1,8 +1,8 @@
-sudo apt-get update
+#sudo apt-get update
 
 # Install python3
 #sudo apt-get -y install python3 python3-pip python3-apt
-#sudo useradd -m -p $(openssl passwd -1 student) ml4t
+sudo useradd -m -p $(openssl passwd -1 student) ml4t
 
 ## ANACONDA INSTALL ##
 # Go to home directory
@@ -20,3 +20,7 @@ echo 'export PATH="~/anaconda/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 
 ~/anaconda/bin/conda update conda -y
+
+~/anaconda/bin/conda env create --file env.yml
+
+~/anaconda/bin/conda init bash
