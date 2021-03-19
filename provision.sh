@@ -2,7 +2,7 @@ sudo apt-get update
 
 # Install python3
 #sudo apt-get -y install python3 python3-pip python3-apt
-sudo useradd -m -p $(openssl passwd -1 student) ml4t
+#sudo useradd -m -p $(openssl passwd -1 student) ml4t
 
 ## ANACONDA INSTALL ##
 # Go to home directory
